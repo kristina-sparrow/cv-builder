@@ -8,38 +8,43 @@ export default function ExperienceInputGroup({
   onItemDelete,
   onItemAdd,
 }) {
-  const { id, company, position, startDate, endDate, desc } = item;
+  const { id, company, position, startDate, endDate, description } = item;
   return (
     <div className="exp-group">
       <InputField
-        label="company"
-        value={company}
+        type="text"
         name="company"
+        placeholder="Company"
+        value={company}
         onChange={onInputArrayChange("experience", index)}
       />
       <InputField
-        label="position"
-        value={position}
+        type="text"
         name="position"
+        placeholder="Position"
+        value={position}
         onChange={onInputArrayChange("experience", index)}
       />
       <InputField
-        label="start date"
+        type="text"
+        name="start-date"
+        placeholder="Start Date"
         value={startDate}
-        name="startDate"
         onChange={onInputArrayChange("experience", index)}
       />
       <InputField
-        label="end date"
+        type="text"
+        name="end-date"
+        placeholder="End Date"
         value={endDate}
-        name="endDate"
         onChange={onInputArrayChange("experience", index)}
       />
 
       <InputField
-        label="description"
-        value={desc || ""}
-        name="desc"
+        type="text"
+        name="description"
+        placeholder="Description"
+        value={description || ""}
         onChange={onInputArrayChange("experience", index)}
       />
       <div className="btn-group">

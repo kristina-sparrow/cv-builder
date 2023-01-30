@@ -12,27 +12,31 @@ export default function EducationInputGroup({
   return (
     <div key={index} className="group">
       <InputField
-        label="course / program"
-        value={course}
+        type="text"
         name="course"
+        placeholder="Course/program"
+        value={course}
         onChange={onInputArrayChange("education", index)}
       />
       <InputField
-        label="school"
-        value={school}
+        type="text"
         name="school"
+        placeholder="School"
+        value={school}
         onChange={onInputArrayChange("education", index)}
       />
       <InputField
-        label="completion date"
+        type="text"
+        name="completion-date"
+        placeholder="Completion date"
         value={completionDate}
-        name="completionDate"
         onChange={onInputArrayChange("education", index)}
       />
       <InputField
-        label="description"
+        type="text"
+        name="description"
+        placeholder="Description"
         value={desc || ""}
-        name="desc"
         onChange={onInputArrayChange("education", index)}
       />
       <div className="btn-group">
