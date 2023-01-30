@@ -2,54 +2,65 @@ import React from "react";
 import InputField from "./InputField";
 
 export default function EducationInputGroup({
-  item,
-  index,
-  onInputArrayChange,
-  onItemDelete,
-  onItemAdd,
+  education,
+  onChange,
+  onAdd,
+  onDelete,
 }) {
-  const { id, course, school, completionDate, desc } = item;
+  const educationItems = education.map((educationItem) => (
+    <EducationItem
+      key={educationItem.id}
+      id={educationItem.id}
+      educationItem={educationItem}
+      onChange={onChange}
+      onDelete={onDelete}
+    ></EducationItem>
+  ));
   return (
-    <div key={index} className="group">
+    <section className="form-section">
+      <h2 className="section-title">Education</h2>
+      {educationItems}
+      <button className="btn-add" onClick={onAdd}>
+        Add
+      </button>
+    </section>
+  );
+}
+
+function EducationItem({ id, educationItem, onChange, onDelete }) {
+  return (
+    <div className="education-item">
       <InputField
         type="text"
         name="course"
         placeholder="Course/program"
-        value={course}
-        onChange={onInputArrayChange("education", index)}
+        value={educationItem.course}
+        onChange={(e) => onChange(e, id)}
       />
       <InputField
         type="text"
         name="school"
         placeholder="School"
-        value={school}
-        onChange={onInputArrayChange("education", index)}
+        value={educationItem.school}
+        onChange={(e) => onChange(e, id)}
       />
       <InputField
         type="text"
         name="completion-date"
         placeholder="Completion date"
-        value={completionDate}
-        onChange={onInputArrayChange("education", index)}
+        value={educationItem.completionDate}
+        onChange={(e) => onChange(e, id)}
       />
       <InputField
         type="text"
         name="description"
         placeholder="Description"
-        value={desc || ""}
-        onChange={onInputArrayChange("education", index)}
+        value={educationItem.description || ""}
+        onChange={(e) => onChange(e, id)}
       />
-      <div className="btn-group">
-        <button
-          className="btn-delete"
-          onClick={() => onItemDelete("education", id)}
-        >
-          Delete
-        </button>
-        <button className="btn-add" onClick={onItemAdd}>
-          Add
-        </button>
-      </div>
+      <button className="btn-delete" onClick={() => onDelete(id)}>
+        Delete
+      </button>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function TextAreaField({ name, placeholder, value, onChange }) {
-  const id = `input--${name.split(" ").join("-")}`;
+  const id = `text-area-${name.split(" ").join("-")}`;
   return (
     <label htmlFor={id}>
       <span className="hidden">{name}</span>

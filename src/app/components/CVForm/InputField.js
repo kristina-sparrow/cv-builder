@@ -7,7 +7,7 @@ export default function InputField({
   value,
   onChange,
 }) {
-  const id = `input--${name.split(" ").join("-")}`;
+  const id = `input-${name.split(" ").join("-")}`;
   return (
     <label htmlFor={id}>
       <span className="hidden">{name}</span>

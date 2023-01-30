@@ -2,62 +2,73 @@ import React from "react";
 import InputField from "./InputField";
 
 export default function ExperienceInputGroup({
-  item,
-  index,
-  onInputArrayChange,
-  onItemDelete,
-  onItemAdd,
+  experience,
+  onChange,
+  onAdd,
+  onDelete,
 }) {
-  const { id, company, position, startDate, endDate, description } = item;
+  const experienceItems = experience.map((experienceItem) => (
+    <ExperienceItem
+      key={experienceItem.id}
+      id={experienceItem.id}
+      experienceItem={experienceItem}
+      onChange={onChange}
+      onDelete={onDelete}
+    />
+  ));
   return (
-    <div className="exp-group">
+    <section className="form-section">
+      <h2 className="section-title">Work Experience</h2>
+      {experienceItems}
+      <button className="btn-add" onClick={onAdd}>
+        Add
+      </button>
+    </section>
+  );
+}
+
+function ExperienceItem({ id, experienceItem, onChange, onDelete }) {
+  return (
+    <div className="experience-item">
       <InputField
         type="text"
         name="company"
         placeholder="Company"
-        value={company}
-        onChange={onInputArrayChange("experience", index)}
+        value={experienceItem.company}
+        onChange={(e) => onChange(e, id)}
       />
       <InputField
         type="text"
         name="position"
         placeholder="Position"
-        value={position}
-        onChange={onInputArrayChange("experience", index)}
+        value={experienceItem.position}
+        onChange={(e) => onChange(e, id)}
       />
       <InputField
         type="text"
         name="start-date"
         placeholder="Start Date"
-        value={startDate}
-        onChange={onInputArrayChange("experience", index)}
+        value={experienceItem.startDate}
+        onChange={(e) => onChange(e, id)}
       />
       <InputField
         type="text"
         name="end-date"
         placeholder="End Date"
-        value={endDate}
-        onChange={onInputArrayChange("experience", index)}
+        value={experienceItem.endDate}
+        onChange={(e) => onChange(e, id)}
       />
 
       <InputField
         type="text"
         name="description"
         placeholder="Description"
-        value={description || ""}
-        onChange={onInputArrayChange("experience", index)}
+        value={experienceItem.description || ""}
+        onChange={(e) => onChange(e, id)}
       />
-      <div className="btn-group">
-        <button
-          className="btn-delete"
-          onClick={() => onItemDelete("experience", id)}
-        >
-          Delete
-        </button>
-        <button className="btn-add" onClick={onItemAdd}>
-          Add
-        </button>
-      </div>
+      <button className="btn-delete" onClick={() => onDelete(id)}>
+        Delete
+      </button>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import TextAreaField from "./TextArea";
 
 export default function PersonalInputGroup({ personalInfo, onChange }) {
   return (
-    <div className="exp-group">
+    <div className="personal-group">
       <InputField
         type="text"
         name="name"
