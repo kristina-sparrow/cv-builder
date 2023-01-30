@@ -1,5 +1,5 @@
 import React from "react";
-import { TfiWrite } from "react-icons/fa";
+import { TfiWrite } from "react-icons/tfi";
 
 export default function Header() {
   return (
