@@ -1,39 +1,32 @@
 import React from "react";
 
-export default function Experience({ heading, experienceList }) {
+export default function Experience({ experience }) {
+  const experienceItems = experience.map((experienceItem) => (
+    <ExperienceItem key={experienceItem.id} experienceItem={experienceItem} />
+  ));
   return (
-    <div className="experience-list">
-      {heading ? <h3>{heading}</h3> : null}
-      {experienceList.map((item, index) => {
-        const { position, company, startDate, endDate, desc } = item;
-        return (
-          <ExperienceItem
-            key={index}
-            heading={position}
-            place={company}
-            startDate={startDate}
-            endDate={endDate}
-            desc={desc}
-          />
-        );
-      })}
+    <div className="experience-group-view">
+      <h3 className="view-section-title">Work Experience</h3>
+      {experienceItems}
     </div>
   );
 }
 
-function ExperienceItem({ heading, place, startDate, endDate, desc }) {
+function ExperienceItem({ experienceItem }) {
   return (
-    <div className="experience">
-      <div className="experience__heading">
-        <h4>{heading}</h4>
-        <div className="experience__details">
-          {place} |{" "}
+    <div className="experience-item-view">
+      <div className="experience-heading">
+        <h4>{experienceItem.position}</h4>
+        <div className="experience-details">
+          {experienceItem.company} |
           <span className="bold">
-            {startDate} – {endDate}
+            {experienceItem.startDate} – {experienceItem.endDate}
           </span>
         </div>
       </div>
-      {desc ? desc : null}
+      <p className="experience-description">
+        {experienceItem.description ? experienceItem.description : null}
+      </p>
     </div>
   );
 }

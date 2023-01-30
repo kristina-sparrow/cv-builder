@@ -3,19 +3,27 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 
-export default function Personal({ name, title, phone, email, location }) {
+export default function Personal({ personalInfo }) {
   return (
-    <header>
-      <div className="heading">
-        <h1>{name}</h1>
-        <h2>{title}</h2>
+    <div className="personal-view">
+      <div className="heading-view">
+        <div className="name-title">
+          <h1>{personalInfo.name}</h1>
+          <h2>{personalInfo.title}</h2>
+        </div>
+        <div className="personal-details-group">
+          <ContactDetails
+            text={personalInfo.phone}
+            icon={<FaPhoneSquareAlt />}
+          />
+          <ContactDetails text={personalInfo.email} icon={<MdEmail />} />
+          <ContactDetails text={personalInfo.location} icon={<ImLocation />} />
+        </div>
+        <p className="personal-description">
+          {personalInfo.description ? personalInfo.description : null}
+        </p>
       </div>
-      <div className="details-group">
-        <ContactDetails text={phone} icon={<FaPhoneSquareAlt />} />
-        <ContactDetails text={email} icon={<MdEmail />} />
-        <ContactDetails text={location} icon={<ImLocation />} />
-      </div>
-    </header>
+    </div>
   );
 }
 
