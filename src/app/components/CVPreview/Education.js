@@ -5,11 +5,11 @@ export default function Education({ heading, educationList }) {
     <div className="education-list">
       {heading ? <h3>{heading}</h3> : null}
       {educationList.map((item, index) => {
-        const { program, school, completionDate, desc } = item;
+        const { course, school, completionDate, desc } = item;
         return (
           <EducationItem
             key={index}
-            heading={program}
+            heading={course}
             place={school}
             completionDate={completionDate}
             desc={desc}
