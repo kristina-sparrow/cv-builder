@@ -1,14 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const DIST_DIR = path.resolve(__dirname, "public");
-const SRC_DIR = path.resolve(__dirname, "src");
-
 module.exports = {
-  entry: SRC_DIR + "/app/index.js",
+  entry: path.resolve(__dirname, "src") + "/index.js",
   output: {
-    path: DIST_DIR,
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "public"),
+    filename: "index_bundle.js",
   },
   module: {
     rules: [
@@ -19,8 +16,12 @@ module.exports = {
     ],
   },
   devServer: {
-    watchFiles: ["src/**/*"],
+    static: ["src"],
     hot: true,
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+    }),
+  ],
 };
