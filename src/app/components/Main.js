@@ -1,11 +1,11 @@
 import React from "react";
-import CVForm from "./CVForm";
+import CVInput from "./CVInput";
 import CVPreview from "./CVPreview";
 
 export default function Main() {
   return (
     <main>
-      <CVForm />
+      <CVInput />
       <CVPreview />
     </main>
   );

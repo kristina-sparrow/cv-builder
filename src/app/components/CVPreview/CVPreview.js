@@ -3,7 +3,7 @@ import Personal from "./Personal";
 import Education from "./Education";
 import Experience from "./Experience";
 
-export default function CVForm() {
+export default function CVPreview() {
   return (
     <div>
       <Personal />
