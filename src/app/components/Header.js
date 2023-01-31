@@ -1,13 +1,12 @@
 import React from "react";
-import { TfiWrite } from "react-icons/tfi";
+import { VscTools } from "react-icons/vsc";
 
 export default function Header() {
   return (
     <header className="header">
       <h1>
-        CV Builder <TfiWrite />
+        CV Builder <VscTools />
       </h1>
-      <button className="btn-reset">Reset</button>
     </header>
   );
 }

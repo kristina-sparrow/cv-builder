@@ -4,8 +4,8 @@
   --grey: hsla(0, 0%, 37%, 1);
   --black: hsla(0, 0%, 20%, 1);
   --blue: hsla(201, 50%, 43%, 1);
-  --dark-green: hsla(194, 63%, 33%, 1);
-  --dark-red: hsla(0, 35%, 55%, 1);
+  --dark-green: hsla(184, 63%, 35%, 1);
+  --dark-red: hsla(0, 35%, 58%, 1);
   --light-green: hsla(194, 30%, 62%, 1);
   --white: hsla(0, 0%, 100%, 1);
 }
@@ -35,11 +35,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+}
+
+.reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0px 25px 0px;
+}
+
+.cv {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

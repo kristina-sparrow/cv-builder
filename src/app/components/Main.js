@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import CVForm from "./CVForm/CVForm";
 import CVPreview from "./CVPreview/CVPreview";
 import sampleCV from "../data/sampleCV";
+import emptyCV from "../data/emptyCV";
 
 export default function Main() {
   const [cv, setCV] = useState(sampleCV);
@@ -97,19 +98,31 @@ export default function Main() {
     });
   }
 
+  function handleReset(e) {
+    e.preventDefault();
+    setCV(emptyCV);
+  }
+
   return (
     <main className="main">
-      <CVForm
-        cv={cv}
-        onChangePersonal={handleChangePersonal}
-        onChangeExperience={handleChangeExperience}
-        onAddExperience={handleAddExperience}
-        onDeleteExperience={handleDeleteExperience}
-        onChangeEducation={handleChangeEducation}
-        onAddEducation={handleAddEducation}
-        onDeleteEducation={handleDeleteEducation}
-      />
-      <CVPreview cv={cv} />
+      <div className="reset">
+        <button className="btn-reset" onClick={handleReset}>
+          Reset
+        </button>
+      </div>
+      <div className="cv">
+        <CVForm
+          cv={cv}
+          onChangePersonal={handleChangePersonal}
+          onChangeExperience={handleChangeExperience}
+          onAddExperience={handleAddExperience}
+          onDeleteExperience={handleDeleteExperience}
+          onChangeEducation={handleChangeEducation}
+          onAddEducation={handleAddEducation}
+          onDeleteEducation={handleDeleteEducation}
+        />
+        <CVPreview cv={cv} />
+      </div>
     </main>
   );
 }
