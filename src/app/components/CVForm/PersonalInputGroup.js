@@ -24,14 +24,14 @@ export default function PersonalInputGroup({ personalInfo, onChange }) {
         <InputField
           type="text"
           name="phone"
-          placeholder="Phone number"
+          placeholder="Phone Number"
           value={personalInfo.phone}
           onChange={(e) => onChange(e)}
         />
         <InputField
           type="text"
           name="email"
-          placeholder="Email address"
+          placeholder="Email Address"
           value={personalInfo.email}
           onChange={(e) => onChange(e)}
         />

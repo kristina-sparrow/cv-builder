@@ -7,6 +7,7 @@ export default function Header() {
       <h1>
         CV Builder <TfiWrite />
       </h1>
+      <button className="btn-reset">Reset</button>
     </header>
   );
 }
