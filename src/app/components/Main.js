@@ -96,7 +96,7 @@ export default function Main() {
   }
 
   return (
-    <main>
+    <main className="main">
       <CVForm
         cv={cv}
         onChangePersonal={handleChangePersonal}

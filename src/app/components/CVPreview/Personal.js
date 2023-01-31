@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhoneSquareAlt } from "react-icons/fa";
+import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 
@@ -14,7 +14,7 @@ export default function Personal({ personalInfo }) {
         <div className="personal-details-group">
           <ContactDetails
             text={personalInfo.phone}
-            icon={<FaPhoneSquareAlt />}
+            icon={<BsTelephoneFill />}
           />
           <ContactDetails text={personalInfo.email} icon={<MdEmail />} />
           <ContactDetails text={personalInfo.location} icon={<ImLocation />} />
@@ -30,7 +30,7 @@ export default function Personal({ personalInfo }) {
 function ContactDetails({ icon, text }) {
   return (
     <div className="contact-details">
-      {icon ? { icon } : null}
+      {icon}
       <span className="details-text">{text}</span>
     </div>
   );

@@ -14,23 +14,25 @@ export default function CVForm({
   onDeleteEducation,
 }) {
   return (
-    <form>
-      <PersonalInputGroup
-        personalInfo={cv.personalInfo}
-        onChange={onChangePersonal}
-      />
-      <ExperienceInputGroup
-        experience={cv.experience}
-        onChange={onChangeExperience}
-        onAdd={onAddExperience}
-        onDelete={onDeleteExperience}
-      />
-      <EducationInputGroup
-        education={cv.education}
-        onChange={onChangeEducation}
-        onAdd={onAddEducation}
-        onDelete={onDeleteEducation}
-      />
-    </form>
+    <div className="cv-form">
+      <form>
+        <PersonalInputGroup
+          personalInfo={cv.personalInfo}
+          onChange={onChangePersonal}
+        />
+        <ExperienceInputGroup
+          experience={cv.experience}
+          onChange={onChangeExperience}
+          onAdd={onAddExperience}
+          onDelete={onDeleteExperience}
+        />
+        <EducationInputGroup
+          education={cv.education}
+          onChange={onChangeEducation}
+          onAdd={onAddEducation}
+          onDelete={onDeleteEducation}
+        />
+      </form>
+    </div>
   );
 }

@@ -29,11 +29,11 @@ export default function EducationInputGroup({
 
 function EducationItem({ id, educationItem, onChange, onDelete }) {
   return (
-    <div className="education-item">
+    <div className="group">
       <InputField
         type="text"
         name="course"
-        placeholder="Course/program"
+        placeholder="Course / Program"
         value={educationItem.course}
         onChange={(e) => onChange(e, id)}
       />
@@ -47,7 +47,7 @@ function EducationItem({ id, educationItem, onChange, onDelete }) {
       <InputField
         type="text"
         name="completion-date"
-        placeholder="Completion date"
+        placeholder="Completion Date"
         value={educationItem.completionDate}
         onChange={(e) => onChange(e, id)}
       />

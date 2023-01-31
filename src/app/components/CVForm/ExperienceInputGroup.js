@@ -29,7 +29,7 @@ export default function ExperienceInputGroup({
 
 function ExperienceItem({ id, experienceItem, onChange, onDelete }) {
   return (
-    <div className="experience-item">
+    <div className="group">
       <InputField
         type="text"
         name="company"

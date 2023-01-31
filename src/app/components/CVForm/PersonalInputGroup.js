@@ -6,7 +6,7 @@ export default function PersonalInputGroup({ personalInfo, onChange }) {
   return (
     <section className="form-section">
       <h2 className="section-title">Personal Details</h2>
-      <div className="personal-item">
+      <div className="group">
         <InputField
           type="text"
           name="name"
@@ -44,7 +44,7 @@ export default function PersonalInputGroup({ personalInfo, onChange }) {
         />
         <TextAreaField
           name="description"
-          placeholder="Description"
+          placeholder="Personal Statement"
           value={personalInfo.description}
           onChange={(e) => onChange(e)}
         />

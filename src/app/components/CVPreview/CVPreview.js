@@ -5,7 +5,7 @@ import Education from "./Education";
 
 export default function CVPreview({ cv }) {
   return (
-    <div className="preview">
+    <div className="cv-preview">
       <Personal personalInfo={cv.personalInfo} />
       <Experience experience={cv.experience} />
       <Education education={cv.education} />

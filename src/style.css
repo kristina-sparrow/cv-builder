@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+
+:root {
+  --grey: hsla(0, 0%, 37%, 1);
+  --black: hsla(0, 0%, 20%, 1);
+  --blue: hsla(201, 50%, 43%, 1);
+  --dark-green: hsla(194, 63%, 27%, 1);
+  --dark-red: hsla(0, 35%, 45%, 1);
+  --light-green: hsla(194, 30%, 62%, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* default 10px */
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cv-preview {
+  padding: 50px;
+  width: 595px;
+  min-width: 595px;
+  height: 842px;
+  border-radius: 2px;
+  border: 1px solid black;
+  box-shadow: 5px 0 6px 0 hsl(0 0% 0% / 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cv-form {
+  width: 595px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1.6rem;
+  margin-top: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2.7rem;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* FORM */
+form {
+  border: 2px solid var(--dark-green);
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+form > h2 {
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  border: 1px solid var(--grey);
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 5px;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.group:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+button {
+  color: var(--black);
+  border: 1px solid var(--grey);
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 150ms;
+}
+
+.btn-add {
+  color: var(--dark-green);
+}
+
+.btn-delete {
+  color: var(--dark-red);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 3px 0 hsl(0 0% 0% / 0.1);
+}
+
+.group:not(:last-child) button.btn-add {
+  display: none;
+}

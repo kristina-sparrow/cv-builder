@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode development",
-    "dev": "webpack --mode development && webpack serve --mode development",
+    "dev": "webpack serve --mode development",
     "prod": "webpack --mode production"
   },
   "repository": {
