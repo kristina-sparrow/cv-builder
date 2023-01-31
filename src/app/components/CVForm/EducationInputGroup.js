@@ -46,7 +46,7 @@ function EducationItem({ id, educationItem, onChange, onDelete }) {
       />
       <InputField
         type="text"
-        name="completion-date"
+        name="completionDate"
         placeholder="Completion Date"
         value={educationItem.completionDate}
         onChange={(e) => onChange(e, id)}
@@ -55,7 +55,7 @@ function EducationItem({ id, educationItem, onChange, onDelete }) {
         type="text"
         name="description"
         placeholder="Description"
-        value={educationItem.description || ""}
+        value={educationItem.description}
         onChange={(e) => onChange(e, id)}
       />
       <button className="btn-delete" onClick={() => onDelete(id)}>

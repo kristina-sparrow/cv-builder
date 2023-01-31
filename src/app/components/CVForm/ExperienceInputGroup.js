@@ -46,14 +46,14 @@ function ExperienceItem({ id, experienceItem, onChange, onDelete }) {
       />
       <InputField
         type="text"
-        name="start-date"
+        name="startDate"
         placeholder="Start Date"
         value={experienceItem.startDate}
         onChange={(e) => onChange(e, id)}
       />
       <InputField
         type="text"
-        name="end-date"
+        name="endDate"
         placeholder="End Date"
         value={experienceItem.endDate}
         onChange={(e) => onChange(e, id)}
@@ -63,7 +63,7 @@ function ExperienceItem({ id, experienceItem, onChange, onDelete }) {
         type="text"
         name="description"
         placeholder="Description"
-        value={experienceItem.description || ""}
+        value={experienceItem.description}
         onChange={(e) => onChange(e, id)}
       />
       <button className="btn-delete" onClick={() => onDelete(id)}>

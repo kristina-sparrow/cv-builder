@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import CVForm from "./CVForm/CVForm";
 import CVPreview from "./CVPreview/CVPreview";
-import emptyCV from "../data/emptyCV";
+import sampleCV from "../data/sampleCV";
 
 export default function Main() {
-  const [cv, setCV] = useState(emptyCV);
+  const [cv, setCV] = useState(sampleCV);
 
   function handleChangePersonal(e) {
     const { name, value } = e.target;
@@ -31,7 +31,8 @@ export default function Main() {
     });
   }
 
-  function handleAddExperience() {
+  function handleAddExperience(e) {
+    e.preventDefault();
     setCV((prevState) => ({
       ...prevState,
       experience: [
@@ -70,7 +71,8 @@ export default function Main() {
     });
   }
 
-  function handleAddEducation() {
+  function handleAddEducation(e) {
+    e.preventDefault();
     setCV((prevState) => ({
       ...prevState,
       education: [
