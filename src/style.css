@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
 :root {
   --grey: hsla(0, 0%, 37%, 1);
   --black: hsla(0, 0%, 20%, 1);
   --blue: hsla(201, 50%, 43%, 1);
-  --dark-green: hsla(184, 63%, 35%, 1);
+  --dark-green: hsla(194, 50%, 33%, 1);
   --dark-red: hsla(0, 35%, 58%, 1);
   --light-green: hsla(194, 30%, 62%, 1);
   --white: hsla(0, 0%, 100%, 1);
@@ -20,17 +21,18 @@
 
 html {
   font-size: 62.5%; /* default 10px */
+  font-size: 80%;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5;
   padding: 20px;
 }
 
 .header {
+  font-family: "Bungee";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +69,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 20px;
+  color: var(--grey);
 }
 
 .cv-form {
@@ -81,6 +84,10 @@ body {
   gap: 5px;
   font-size: 1.3rem;
   margin-top: 25px;
+}
+
+.footer svg {
+  color: var(--black);
 }
 
 .hidden {
@@ -131,6 +138,8 @@ textarea {
   font-size: 1rem;
   padding: 5px;
   width: 100%;
+  color: var(--black);
+  font-size: 0.9rem;
 }
 
 textarea {
@@ -192,8 +201,8 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid var(--light-green);
-  padding-bottom: 12px;
-  margin-bottom: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .personal-name {
@@ -204,6 +213,7 @@ button:hover {
 .personal-name h1 {
   color: var(--dark-green);
   text-transform: uppercase;
+  font-size: 2.3rem;
 }
 
 .personal-name h2 {
@@ -264,7 +274,7 @@ button:hover {
 
 h4,
 .item-details {
-  color: var(--grey);
+  color: var(--black);
 }
 
 .item-details {
@@ -272,6 +282,7 @@ h4,
   flex-direction: row;
   align-items: flex-start;
   gap: 2px;
+  font-size: 0.9rem;
 }
 
 .item-description {
