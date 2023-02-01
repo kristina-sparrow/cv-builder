@@ -6,12 +6,12 @@ import { ImLocation } from "react-icons/im";
 export default function Personal({ personalInfo }) {
   return (
     <div className="personal-view">
-      <div className="heading-view">
-        <div className="name-title">
+      <div className="personal-heading">
+        <div className="personal-name">
           <h1>{personalInfo.name}</h1>
           <h2>{personalInfo.title}</h2>
         </div>
-        <div className="personal-details-group">
+        <div className="personal-details">
           <ContactDetails
             text={personalInfo.phone}
             icon={<BsTelephoneFill />}
@@ -19,10 +19,10 @@ export default function Personal({ personalInfo }) {
           <ContactDetails text={personalInfo.email} icon={<MdEmail />} />
           <ContactDetails text={personalInfo.location} icon={<ImLocation />} />
         </div>
-        <p className="personal-description">
-          {personalInfo.description ? personalInfo.description : null}
-        </p>
       </div>
+      <p className="personal-description">
+        {personalInfo.description ? personalInfo.description : null}
+      </p>
     </div>
   );
 }

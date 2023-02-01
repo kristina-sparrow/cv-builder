@@ -144,6 +144,10 @@ textarea {
   gap: 5px;
 }
 
+.group:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
 button {
   border: 1px solid var(--grey);
   color: var(--white);
@@ -161,7 +165,7 @@ button {
 
 .btn-add {
   background-color: var(--dark-green);
-  margin-top: 5px;
+  margin: 5px 0px;
 }
 
 .btn-delete {
@@ -178,4 +182,102 @@ button {
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 3px 0 hsl(0 0% 0% / 0.1);
+}
+
+/* PREVIEW */
+.personal-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--light-green);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.personal-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-name h1 {
+  color: var(--dark-green);
+  text-transform: uppercase;
+}
+
+.personal-name h2 {
+  color: var(--grey);
+}
+
+.personal-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.details-text {
+  font-size: 0.8rem;
+}
+
+.contact-details svg {
+  width: 14px;
+}
+
+.view-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.view-section-title {
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.item-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.item-heading,
+.item-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h4,
+.item-details {
+  color: var(--grey);
+}
+
+.item-details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.item-description {
+  margin-bottom: 5px;
+}
+
+.bold {
+  font-weight: 600;
 }

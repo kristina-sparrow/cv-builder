@@ -5,7 +5,7 @@ export default function Education({ education }) {
     <EducationItem key={educationItem.id} educationItem={educationItem} />
   ));
   return (
-    <div className="education-group-view">
+    <div className="view-section">
       <h3 className="view-section-title">Education</h3>
       {educationItems}
     </div>
@@ -14,15 +14,15 @@ export default function Education({ education }) {
 
 function EducationItem({ educationItem }) {
   return (
-    <div className="education-item-view">
-      <div className="education-heading">
+    <div className="item-group">
+      <div className="item-heading">
         <h4>{educationItem.course}</h4>
-        <div className="education-details">
-          {educationItem.school} |
+        <div className="item-details">
+          {educationItem.school} |{" "}
           <span className="bold">{educationItem.completionDate}</span>
         </div>
       </div>
-      <p className="education-description">
+      <p className="item-description">
         {educationItem.description ? educationItem.description : null}
       </p>
     </div>

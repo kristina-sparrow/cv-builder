@@ -5,7 +5,7 @@ export default function Experience({ experience }) {
     <ExperienceItem key={experienceItem.id} experienceItem={experienceItem} />
   ));
   return (
-    <div className="experience-group-view">
+    <div className="view-section">
       <h3 className="view-section-title">Work Experience</h3>
       {experienceItems}
     </div>
@@ -14,17 +14,17 @@ export default function Experience({ experience }) {
 
 function ExperienceItem({ experienceItem }) {
   return (
-    <div className="experience-item-view">
-      <div className="experience-heading">
+    <div className="item-group">
+      <div className="item-heading">
         <h4>{experienceItem.position}</h4>
-        <div className="experience-details">
-          {experienceItem.company} |
+        <div className="item-details">
+          {experienceItem.company} |{" "}
           <span className="bold">
             {experienceItem.startDate} – {experienceItem.endDate}
           </span>
         </div>
       </div>
-      <p className="experience-description">
+      <p className="item-description">
         {experienceItem.description ? experienceItem.description : null}
       </p>
     </div>
