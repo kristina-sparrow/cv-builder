@@ -5,7 +5,7 @@ import { ImLocation } from "react-icons/im";
 
 export default function Personal({ personalInfo }) {
   return (
-    <div className="personal-view">
+    <div className="view-personal">
       <div className="personal-heading">
         <div className="personal-name">
           <h1>{personalInfo.name}</h1>

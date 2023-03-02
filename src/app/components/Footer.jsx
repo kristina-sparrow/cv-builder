@@ -8,7 +8,7 @@ export default function Footer() {
       <a
         href="https://github.com/kristina-sparrow"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         <FaGithub />
       </a>
